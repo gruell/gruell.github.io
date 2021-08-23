@@ -1,0 +1,443 @@
+body {
+	overflow: scroll;
+	width: 100vh;
+	margin: 0 auto;
+}
+
+.stretcher {
+	width: 100vh;
+	padding-bottom: 60.78vh; /* 16:9 */
+	position: relative;
+	
+}
+
+h1 {
+    font-size: 60px;
+    color: white;
+}
+
+div.stretchy-wrapper {
+	width: 100%;
+	padding-bottom: 66.66%;
+	position: relative;
+}
+
+.box {
+    width: 200px;
+    height: 200px;
+    border: 5px solid black;
+    border-color: black;
+    display: inline-block;
+}
+
+.desktopWindow {
+    width: 60vh;
+    height: 40vh;
+    border: 2px solid black;
+    border-color: black;
+    cursor: pointer;
+}
+
+.desktopWindowBig {
+    width: 72vh;
+    height: 48vh;
+    border: 2px solid black;
+    border-color: black;
+    cursor: pointer;
+}
+
+.desktopWindowMedium {
+    width: 40vh;
+    height: 30vh;
+    border: 2px solid black;
+    border-color: black;
+    cursor: pointer;
+}
+
+.desktopWindowSmall {
+    width: 45vh;
+    height: 60vh;
+    border: 2px solid black;
+    border-color: black;
+    cursor: pointer;
+}
+
+.basicPanel {
+    border: 5px solid black;
+    border-color: black;
+    background-color: white;
+}
+
+.panel1 {
+    margin-top: 20px;
+    height: 60vh;
+    border: 5px solid black;
+    border-color: black;
+    background-color: white;
+}
+
+.panel2 {
+    margin-top: 20px;
+    height: 40vh;
+    z-index: 9;
+    border: 5px solid black;
+    border-color: black;
+    background-color: white;
+}
+
+.panelSmallFlex1 {
+    margin-top: 20px;
+    margin-right: 20px;
+    height: 40vh;
+    border: 5px solid black;
+    border-color: black;
+    background-color: white;
+    flex: 1;
+}
+
+.panelSmallFlex2 {
+    margin-top: 20px;
+    height: 40vh;
+    border: 5px solid black;
+    border-color: black;
+    background-color: white;
+    flex: 2;
+}
+
+.panelSmall1 {
+    margin-top: 20px;
+    height: 40vh;
+    border: 5px solid black;
+    border-color: black;
+    background-color: white;
+    width: 70%;
+}
+
+.panelSmall2 {
+    margin-top: 20px;
+    height: 40vh;
+    border: 5px solid black;
+    border-color: black;
+    background-color: white;
+    width: 25%;
+}
+
+.pullTrigger {
+    margin-top: 20px;
+    padding: 10px;
+    height: 40vh;
+    width: 75%;
+    z-index: 0;
+    border: 5px solid black;
+    border-color: black;
+    background-color: #909ead;
+    position: absolute;
+}
+
+.panelTrigger {
+    margin-top: 20px;
+    height: 40vh;
+    width: 96.5%;
+    z-index: 9;
+    border: 5px solid black;
+    border-color: black;
+    background-color: white;
+    position: relative;
+}
+
+.triggerContainment {
+    margin-top: 20px;
+    padding: 10px;
+    height: 63vh;
+    width: 20%;
+    z-index: 0;
+    border: 1px solid lightgrey;
+    position: absolute;
+}
+
+.triggerContainer {
+    position: relative;
+}
+
+.afterTrigger {
+    position: relative;
+    width: auto;
+}
+
+.panelRow {
+    display: flex;
+    z-index: 4;
+}
+
+.invisiblePanel {
+    border: 5px solid white;
+}
+
+.long {
+    height: 100vh;
+    width: 90%;
+    padding: 0px;
+    cursor: pointer;
+}
+
+.big {
+    height: 100vh;
+    width: 120%;
+    padding: 0px;
+    cursor: pointer;
+    margin:0 -10vh;
+    z-index: 0;
+}
+
+
+.eyeClosed {
+    opacity: 0;
+}
+
+.stillInBed {
+    opacity: 0;
+}
+
+.closedFridge {
+    opacity: 0;
+}
+
+.image {
+    margin-left: auto;
+    margin-right: auto; 
+    height: 100%; 
+    width: 100%; 
+    object-fit: fill; 
+    position: relative;
+}
+
+.gridPanels {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    height: 130vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1.3fr 1.7fr 1.3fr;
+    gap: 20px 20px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "gridPanel1 gridPanel2 gridPanel3"
+      "gridPanel4 gridPanel4 gridPanel5"
+      "gridPanel4 gridPanel4 gridPanel6";
+}
+  
+.gridPanel4 { grid-area: gridPanel4; }
+  
+.gridPanel1 { grid-area: gridPanel1; }
+  
+.gridPanel2 { grid-area: gridPanel2; }
+  
+.gridPanel3 { grid-area: gridPanel3; }
+  
+.gridPanel5 { grid-area: gridPanel5; }
+  
+.gridPanel6 { grid-area: gridPanel6; }
+
+
+.freezerGridPanels {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: 0.5fr 1fr 1fr 0.5fr;
+    grid-template-rows: 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "freezerPanel1 freezerPanel2 freezerPanel3 freezerPanel4";
+    width: 100%;
+    height: 75vh;
+}
+  
+.freezerPanel1 { grid-area: freezerPanel1; }
+  
+.freezerPanel2 { 
+      grid-area: freezerPanel2;
+      cursor: pointer;
+     }
+  
+.freezerPanel3 { grid-area: freezerPanel3; }
+  
+.freezerPanel4 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "freezerPanel5 freezerPanel5 freezerPanel5"
+      "freezerPanel6 freezerPanel6 freezerPanel6"
+      "freezerPanel7 freezerPanel7 freezerPanel7";
+    grid-area: freezerPanel4;
+}
+  
+.freezerPanel5 { grid-area: freezerPanel5; }
+  
+.freezerPanel6 { grid-area: freezerPanel6; }
+  
+.freezerPanel7 { grid-area: freezerPanel7; }
+
+
+.eggGridPanels {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: 2.5fr 1fr;
+    grid-template-rows: 1.5fr 1.2fr 1.5fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "eggPanel1 ."
+      "eggPanel1 eggPanel2"
+      "eggPanel1 .";
+    width: 100%;
+    height: 50vh;
+}
+  
+.eggPanel1 { 
+      grid-area: eggPanel1;
+      z-index: 2;
+}
+  
+.eggPanel2 { grid-area: eggPanel2; }
+
+
+.basicTriggerContainment {
+    border: 1px solid lightgrey;
+    margin-left: -25vh;
+    padding-top: 5%;
+    padding-right: 5%;
+}
+
+
+.basicPullTrigger {
+    height: 80%;
+    width: 60%;
+    z-index: 0;
+    border: 5px solid black;
+    border-color: black;
+    background-color: #909ead;
+    position: relative;
+}
+
+.cookingGridPanels {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-auto-columns: 1fr;
+    gap: 20px 20px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "cookingPanel1 cookingPanel1 . . . ."
+      "cookingPanel1 cookingPanel1 cookingPanel2 cookingPanel2 . ."
+      ". . cookingPanel2 cookingPanel2 cookingPanel3 cookingPanel3"
+      ". . . . cookingPanel3 cookingPanel3";
+    width: 100%;
+    height: 60vh;
+  }
+  
+  .cookingPanel1 { grid-area: cookingPanel1; }
+  
+  .cookingPanel2 { grid-area: cookingPanel2; }
+  
+  .cookingPanel3 { grid-area: cookingPanel3; }
+
+  .panGridPanels {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: 2.5fr 1fr;
+    grid-template-rows: 1fr 2fr 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "panPanel1 ."
+      "panPanel1 panPanel2"
+      "panPanel1 .";
+    width: 100%;
+    height: 35vh;
+}
+  
+.panPanel1 { 
+      grid-area: panPanel1;
+      z-index: 2;
+}
+  
+.panPanel2 { grid-area: panPanel2; }
+
+.leavingGridPanels {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: 1.6fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-auto-columns: 1fr;
+    gap: 20px 20px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "leavingPanel1 leavingPanel2 ."
+      "leavingPanel1 leavingPanel2 leavingPanel3"
+      "leavingPanel1 . leavingPanel3";
+    width: 100%;
+    height: 45vh;
+  }
+  
+  .leavingPanel1 { grid-area: leavingPanel1; }
+  
+  .leavingPanel2 { grid-area: leavingPanel2; }
+  
+  .leavingPanel3 { grid-area: leavingPanel3; }
+
+
+  .chairGridPanel {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: 1.6fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-auto-columns: 1fr;
+    gap: 0px 20px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "chairPanel1 chairPanel2 chairPanel2";
+    width: 100%;
+    height: 45vh;
+  }
+  
+  .chairPanel1 { grid-area: chairPanel1; }
+  
+  .chairPanel2 { grid-area: chairPanel2; }
+
+
+  .endGridPanel {
+    height: 120vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 4fr;
+    grid-auto-columns: 1fr;
+    grid-auto-rows: 1fr;
+    gap: 20px 20px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "endPanel1 ."
+      "endPanel1 endPanel2"
+      ". endPanel2"
+      "endPanel3 endPanel3";
+  }
+  
+  .endPanel1 { grid-area: endPanel1; }
+  
+  .endPanel2 { grid-area: endPanel2; }
+  
+  .endPanel3 { grid-area: endPanel3; }
+  
+  
+  
+  
+
+
+  
+  
+  
+  
+  

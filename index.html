@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MOVABLE</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body style="background-color: #0b141a;">
+
+    <!-- <div class="panel1"></div>
+    <div class="panel1" id="panel2">
+        <div class="box" id="box1"></div>
+    </div>
+    <div class="panel1"></div>
+    <div class="panel1" id="panel4">
+        <div class="box" id="box2"></div>
+        <div class="box" id="box3"></div>
+    </div>
+    <div class="panel1"></div>
+    <div class="panelRow">
+        <div class="panelSmall1"></div>
+        <div class="panelSmall2" id="panelSmall2"></div>
+    </div>
+
+    <div class="panelRow">
+        <div class="panelSmall1"></div>
+        <div class="panelSmall2 invisiblePanel"></div>
+    </div>
+    
+    <div class="panel1" id="panelDrag"></div> -->
+	<div class="stretcher">
+		<h1>MOVABLE</h1>
+	
+    	<div class="triggerContainer">
+        	<div class="triggerContainment" id="triggerContainment">
+            	<div class="pullTrigger" id="pullTrigger"></div>
+        	</div>
+			
+        	<div class="panelTrigger" id="panelTrigger">
+            	<img id="eye_panel" src="Panel1_1/Window_1.jpg" style="height: 100%; width: 100%; object-fit: fill; z-index: 1; position: relative;">
+        	</div>
+			
+       		<div class="panelRow">
+            	<div class="panelSmall2" style="opacity: 0; z-index: -9;"></div>
+            	<div class="panelSmall1 eyeClosed">
+                	<img src="Panel2/Bedroom.jpg" style="height: 100%; width: 100%; object-fit: fill; position: relative;">
+            	</div>
+        	</div>
+   		</div>
+
+    	<div class="panel1 long eyeClosed" id = "panelDrag">
+        	<img src="Panel3/Bed/Bed_1.jpg" id="bedPanel" style="margin-left: auto; margin-right: auto; height: 100%; width: 100%; object-fit: fill; position: relative;">
+    	</div>
+
+    	<div class="panelRow stillInBed" id="gettingUp">
+        	<div class="panelSmallFlex1">
+            	<img src="Panel4/GettingUp.jpg" style="margin-left: auto; margin-right: auto; height: 100%; width: 100%; object-fit: fill; position: relative;">
+        	</div>
+        	<div class="panelSmallFlex2">
+            	<img src="Panel5/GettingUp2.jpg" id="standingUp"style="margin-left: auto; margin-right: auto; height: 100%; width: 100%; object-fit: fill; position: relative;">
+        	</div>
+    	</div>
+
+    	<div class="panel1 big stillInBed" id="closetDiv">
+        	<img src="Panel6/Closet1.jpg" id="closet"style="margin-left: auto; margin-right: auto; height: 100%; width: 100%; object-fit: fill; position: relative;">
+        	<img src="Panel6/Closet2.jpg" id="closet2"style="margin-left: auto; margin-right: auto; height: 100%; width: 100%; object-fit: fill; position: relative; display:none">
+    	</div>
+
+    	<div class="gridPanels">
+        	<div class="gridPanel4 basicPanel">
+            	<img src="Panel7/Kitchen.jpg" class="image" id="kitchen1">
+            	<img src="Panel7/Kitchen2.jpg" class="image" style="display: none;">
+        	</div>
+        	<div class="gridPanel1 basicPanel">
+            	<img src="Panel7/Dressing.jpg" class="image">
+        	</div>
+        	<div class="gridPanel2 basicPanel">
+            	<img src="Panel7/Dressing2.jpg" class="image">
+       		</div>
+        	<div class="gridPanel3 basicPanel">
+            	<img src="Panel7/Dressing3.jpg" class="image">
+        	</div>
+        	<div class="gridPanel5 basicPanel">
+            	<img src="Panel7/Dressing4.jpg" class="image">
+        	</div>
+        	<div class="gridPanel6 basicPanel" id="lightSwitch">
+            	<img src="Panel7/Dressing5.jpg" class="image">
+        	</div>
+      	</div>
+
+    	<div class="freezerGridPanels">
+        	<div class="freezerPanel1 basicPanel closedFridge">
+            	<img src="Panel8/Fridge3.jpg" class="image">
+        	</div>
+        	<div class="freezerPanel2 basicPanel">
+            	<img src="Panel8/Fridge1.jpg" class="image" id="freezer">
+        	</div>
+        	<div class="freezerPanel3 basicPanel">
+            	<img src="Panel8/Fridge4.jpg" class="image" id="inFrontOfFreezer">
+        	</div>
+        	<div class="freezerPanel4 closedFridge">
+            	<div class="freezerPanel5 basicPanel" id="fridge6" style="display: none;">
+                	<img src="Panel8/Fridge6.jpg" class="image">
+            	</div>
+            	<div class="freezerPanel6 basicPanel" id="fridge7" style="display: none;">
+                	<img src="Panel8/Fridge7.jpg" class="image">
+            	</div>
+            	<div class="freezerPanel7 basicPanel" id="fridge8"style="display: none;">
+                	<img src="Panel8/Fridge8.jpg" class="image" >
+            	</div>
+        	</div>
+     	</div>
+
+      	<div class="eggGridPanels" id="crackingEggPanels">
+        	<div class="eggPanel1 basicPanel" id="eggCrack" style="display: none;">
+            	<img src="Panel9/Egg.jpg" class="image" id="crackingEgg">
+        	</div>
+        	<div class="eggPanel2 basicTriggerContainment" id="eggTriggerContainment" style="display: none;">
+            	<div class="basicPullTrigger" id="eggPullTrigger"></div>
+        	</div>
+      	</div>
+
+      	<div class="cookingGridPanels" id="eggCookingPanels" style="margin-top: -40px; margin-left: 20px;">
+        	<div class="cookingPanel1 basicPanel" id="eggCooking1" style="display: none; z-index: 5; ">
+            	<img src="Panel9/Egg6.jpg" class="image">
+        	</div>
+        	<div class="cookingPanel2 basicPanel" id="eggCooking2" style="display: none;">
+            	<img src="Panel9/Egg7.jpg" class="image">
+        	</div>
+        	<div class="cookingPanel3 basicPanel" id="eggCooking3" style="z-index: 99; display: none; ">
+            	<img src="Panel9/Egg8.jpg" class="image">
+        	</div>
+      	</div>
+
+		<!--<div class="panel1 big" style="margin-top: -20px; height: 70vh">
+        	<img src="Panel10/Stove1.jpg" class="image"></div>
+      	</div>
+
+      	<div class="panel1 big" style="margin-top: 10px; height: 20vh">
+        	<img src="Panel10/Stove7.jpg" class="image"></div>
+      	</div> -->
+
+      	<div class="panGridPanels" style="margin-top:20px; z-index: 0;">
+        	<div class="panPanel1 basicPanel">
+            	<img src="Panel11/Pan1.jpg" class="image" id="movingPan">
+        	</div>
+        	<div class="panPanel2 basicTriggerContainment" id="panTriggerContainment">
+            	<div class="basicPullTrigger" id="panPullTrigger">
+                	<img src="Panel11/Grip1.jpg" class="image">
+            	</div>
+        	</div>
+      	</div>
+
+      	<div class="leavingGridPanels">
+        	<div class="leavingPanel1 basicPanel">
+            	<img src="Panel11/Serving1.jpg" class="image">
+        	</div>
+        	<div class="leavingPanel2 basicPanel">
+            	<img src="Panel11/Serving2.jpg" class="image">
+        	</div>
+        	<div class="leavingPanel3 basicPanel">
+            	<img src="Panel11/Serving3.jpg" class="image">
+        	</div>
+      	</div>
+
+      	<div class="chairGridPanel">
+        	<div class="chairPanel1 basicPanel">
+            	<img src="Panel11/Sitting2.jpg" class="image">
+        	</div>
+        	<div class="chairPanel2 basicPanel">
+            	<img src="Panel11/Sitting1.jpg" class="image">
+        	</div>
+      	</div>
+
+      	<!-- <div class="panel1" style="height: 70vh">
+        	<img src="Panel12/Desk1.jpg" class="image"></div> -->
+
+      	<div class="panel1 big basicPanel" id="desktop" style="margin-top: 20px; height: 90vh; display: flex; justify-content: center; align-items: center; cursor: default">
+        	<div id="windowStack" style="display: flex; position: absolute; z-index: 3; justify-content: center; align-items: center">
+            	<div class="desktopWindow" id="heyYou" style="position: absolute;">
+                	<img src="Panel12/heyyou.jpg" class="image">
+            	</div>
+            	<div class="desktopWindow" style="position: absolute;">
+                	<img src="Panel12/Hub.jpg" class="image">
+            	</div>
+            	<div class="desktopWindowMedium" style="position: absolute;">
+                	<img src="Panel12/Codevid.jpg" class="image">
+            	</div>
+            	<div class="desktopWindow" style="position: absolute;">
+                	<img src="Panel12/Twitter.jpg" class="image">
+            	</div>
+            	<div class="desktopWindowSmall" style="position: absolute;">
+                	<img src="Panel12/Creddit.jpg" class="image">
+            	</div>
+            	<div class="desktopWindowBig" style="position: absolute;">
+                	<img src="Panel12/Youtube.jpg" class="image">
+            	</div>
+        	</div>
+        	<img src="Panel12/Desk2.jpg" class="image">
+      	</div>
+
+      	<div class="endGridPanel"  id="#endPanels" style="margin-top: 20px">
+        	<div class="endPanel1 basicPanel" id="end1" style="display: none;">
+            	<img src="Panel12/end1.jpg" class="image">
+        	</div>
+        	<div class="endPanel2 basicPanel" id="end2" style="display: none;">
+            	<img src="Panel12/end2.jpg" class="image">
+        	</div>
+        	<div class="endPanel3 basicPanel" id="end3" style="display: none;">
+            	<a href="https://eterminservice.de/terminservice"><img src="Panel12/end3.jpg" class="image"></a>
+        	</div>
+      	</div>
+	</div>
+    
+		
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/ScrollTrigger.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"
+            integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+            crossorigin="anonymous">
+    </script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"
+            integrity="sha256-T0Vest3yCU7pafRw9r+settMBX6JkKN06dqBnpQ8d30="
+            crossorigin="anonymous"></script>
+    <script src="app.js"></script>
+
+
+</body>
+</html>
